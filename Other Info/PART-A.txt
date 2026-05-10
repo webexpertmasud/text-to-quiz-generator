@@ -1,0 +1,76 @@
+(1) Ans: Agentic AI vs Generative AI (In Context of Business)
+
+An agentic AI is an AI system which can make decisions, execute plans, and perform activities to accomplish its objectives.
+A generative AI, on the other hand, is responsible for creating contents such as texts, images, or codes from prompt-based inputs without performing independent actions.
+
+Real-world examples:
+1. Generative AI: Email writing or content creation via ChatGPT.
+2. Agentic AI: An AI customer support software that automatically analyzes grievances, initiates a ticket, assigns it to an agent, and performs follow-ups.
+
+The fundamental difference between both: Generative AI creates content, whereas agentic AI acts on tasks.
+
+(2)Ans: CPU Performance vs. GPU Performance + Docker Necessity
+CPU (Central Processing Unit):
+1. Can handle general computations 
+2. Limited ability to carry out processes in parallel 
+3. Slightly slower when performing AI processes
+
+GPU (Graphics Processing Unit):
+1. Specifically designed for processes in parallel
+2. Highly suitable for training and executing LLM models
+3. Faster than the CPU 
+
+Necessity for Using Docker:
+1. Provides an environment that is consistent across all devices
+2. Avoids any compatibility issues  
+3. Makes deployment easier
+
+
+
+(3) Ans: Quantization Techniques in Local LLMs
+Quantization involves decreasing the precision of the weights in a model (e.g., FP32 to INT8 and INT4).
+
+Advantages:
+1. Saves memory space considerably
+2. Enhances the speed of execution
+3. Decreases latency in generating responses
+4. Helps run bigger models on smaller machines
+
+Example: It becomes easier to execute a model containing 13 billion parameters by quantizing them to 4 bits.
+
+
+(4) Ans: Significance of System Prompt Design and Guardrails
+
+System Prompt Design:
+1. Determines the system’s actions and personality traits
+2. Provides predictable and controllable results
+
+Guardrails and Safety:
+1. Avoids unwanted and dangerous responses
+2. Adheres to policies and laws
+3. Minimizes hallucinations and mistakes
+
+Significance in Production:
+1. Increases dependability
+2. Guarantees user safety
+3. Safeguards brand reputation
+
+(5) Ans: RAG Architecture (Retrieval-Augmented Generation)
+This refers to the integration of information retrieval with LLM generation.
+
+Process:
+1. User enters query
+2. System accesses relevant documents from knowledge source
+3. LLM answers the query by utilizing the accessed information
+Document Preparation:
+
+1. Data cleansing and organization (PDFs, textual data, websites)
+2. Document preparation for effective searching and retrieval 
+
+Chunking Approach:
+1. Dividing long documents into smaller units
+2. Increases retrieval effectiveness
+3. Enables fitting data into context window constraints
+Outcome: Accurate and timely answers.
+
+

@@ -1,0 +1,34 @@
+🟢 Trigger Words (Input keywords)
+
+1. water boils
+2. capital of bangladesh
+3. sun rises
+4. photosynthesis
+5. triangle
+6. square
+7. earth revolves
+8. moon
+9. oxygen
+10. plants
+11. bangladesh independence
+12. river padma
+13. capital of india
+14. largest ocean
+15. largest continent
+16. human heart
+17. blood
+18. computer
+19. keyboard
+20. mouse
+21. python
+22. internet
+23. school
+24. teacher
+25. doctor
+26. hospital
+27. car
+28. train
+29. rain
+30. air
+
+

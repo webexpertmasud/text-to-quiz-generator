@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Quiz Generator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 400px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            outline: none;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #5a67d8;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f7f7f7;
+            border-radius: 8px;
+        }
+
+        .question {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .answer {
+            color: green;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>🧠 Quiz Generator</h2>
+
+    <textarea id="text" placeholder="Enter text..."></textarea>
+
+    <button onclick="generateQuiz()">Generate Quiz</button>
+
+    <div class="output">
+        <p class="question" id="question"></p>
+        <p class="answer" id="answer"></p>
+    </div>
+
+</div>
+
+<script>
+    async function generateQuiz() {
+        let text = document.getElementById("text").value;
+
+        let res = await fetch("http://127.0.0.1:8000/generate", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ text: text })
+        });
+
+        let data = await res.json();
+
+        document.getElementById("question").innerText = "Q: " + data.question;
+        document.getElementById("answer").innerText = "A: " + data.answer;
+    }
+</script>
+
+</body>
+</html>
